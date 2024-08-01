@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Media List</title>
+</head>
+<body>
+    <h1>All Media Files</h1>
+    <ul>
+        {% for media in all_media %}
+            <li>{{ media.name }} - {{ media.type }} - {{ media.format }} - {{ media.size }}MB - {{ media.duration_secs }}s</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Audio Files</h2>
+    <ul>
+        {% for media in audio_files %}
+            <li>{{ media.name }} - {{ media.format }} - {{ media.size }}MB - {{ media.duration_secs }}s</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Video Files</h2>
+    <ul>
+        {% for media in video_files %}
+            <li>{{ media.name }} - {{ media.format }} - {{ media.size }}MB - {{ media.duration_secs }}s</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Images</h2>
+    <ul>
+        {% for media in image_files %}
+            <li>{{ media.name }} - {{ media.format }} - {{ media.size }}MB</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
